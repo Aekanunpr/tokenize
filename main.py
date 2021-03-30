@@ -13,7 +13,7 @@ app = FastAPI()
 
 
 
-@app.get("/cut")
+@app.get("/cut/{text}")
 def read_root(text:str):
     TEXT = text.lower()
     list_word=word_tokenize(TEXT)
