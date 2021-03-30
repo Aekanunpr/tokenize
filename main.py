@@ -19,4 +19,5 @@ def read_root(text:str):
     list_word=word_tokenize(TEXT)
     stop_words = set(stopwords.words('english'))
     filter_sentence=[word for word in list_word if not word in list(stop_words)]
-    return {"text": filter_sentence}
+    t = " ".join(filter_sentence)
+    return {"text": t}
